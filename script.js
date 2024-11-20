@@ -4,3 +4,12 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice());
+
+function getHumanchoice(){
+    let y = prompt("Choose Something Dawg","")
+    return y;
+}
+
+console.log(getHumanchoice());
+
+
