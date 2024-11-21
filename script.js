@@ -14,13 +14,22 @@ function getComputerChoice() {
 
 function getHumanChoice() {
   let x = prompt("Type rock/paper/scissors", "");
+  if(x == null){
+    return("invalid input");
+  }
+
+  else{
   return x;
+  }
 }
 
 function playGame() {
 
   let humanScore = 0;
   let computerScore = 0;
+  
+  let humanSelection = getHumanChoice();
+  let computerSelection = getComputerChoice();
 
   function playRound(humanChoice, computerChoice) {
 
@@ -59,13 +68,28 @@ function playGame() {
       console.log("You Won! Scissors beats Paper");
       humanScore++;
     }
+    else {
+      console.log("Please choose rock/paper//scissors");
+    }
   }
 
-  for (let i = 0; i < 5; i++) {
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-}
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+
+  humanSelection = getHumanChoice();
+  computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
 
   console.group("result:");
 
