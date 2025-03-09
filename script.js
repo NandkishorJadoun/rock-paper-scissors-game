@@ -65,40 +65,53 @@ function playGame() {
 
     }
 
+
+    if(roundResult.textContent === "YOU DRAW"){
+      roundResult.style = "background-color: rgba(0,0,0, 0.15); color: rgb(61, 61, 61)"
+    }
+    else if(roundResult.textContent === "YOU LOSE"){
+      roundResult.style = "background-color: rgba(255, 0, 0, 0.15); color: rgb(255, 0, 0)"
+    }
+    else if(roundResult.textContent === "YOU WON")[
+      roundResult.style = "background-color: rgba(34, 255, 0, 0.15); color: rgb(21, 155, 0)"
+    ]
+
     compScore.textContent = computerScore;
     yourScore.textContent = humanScore;
   }
   
   const compChoice = document.createElement("div")
   const yourChoice = document.createElement("div")
+  let computerSelection;
 
+  
   rock.addEventListener("click", () => {
-    let computerSelection = getComputerChoice();
+    computerSelection = getComputerChoice();
     playRound("rock", computerSelection);
     yourChoice.textContent = `You choose ROCK`
     compChoice.textContent = `Computer choose ${computerSelection.toUpperCase()}`
   })
-
+  
   paper.addEventListener("click", () => {
-    let computerSelection = getComputerChoice();
-    playRound("paper", computerSelection);
-    yourChoice.textContent = `You choose PAPER`
-    compChoice.textContent = `Computer choose ${computerSelection.toUpperCase()}`
-
-  })
-
-  scissors.addEventListener("click", () => {
-    let computerSelection = getComputerChoice();
+     computerSelection = getComputerChoice();
+     playRound("paper", computerSelection);
+     yourChoice.textContent = `You choose PAPER`
+     compChoice.textContent = `Computer choose ${computerSelection.toUpperCase()}`
+     
+    })
+    
+    scissors.addEventListener("click", () => {
+      computerSelection = getComputerChoice();
     playRound("scissors", computerSelection);
     yourChoice.textContent = `You choose SCISSORS`
     compChoice.textContent = `Computer choose ${computerSelection.toUpperCase()}`
-
+    
   })
-
+  
   const choices = document.querySelector("#choices")
   const result = document.querySelector("#result")
-  choices.appendChild(compChoice)
   choices.appendChild(yourChoice)
+  choices.appendChild(compChoice)
   result.appendChild(roundResult)
 
 }

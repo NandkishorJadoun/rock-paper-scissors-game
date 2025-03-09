@@ -1,0 +1,63 @@
+body{
+    background: linear-gradient(135deg, #ffed24, #d29c14);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    background-color: white;
+    width: 45%;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+#score{
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+#score span{
+    font-weight: bold;
+}
+
+#button-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#button-container > button{
+    background-color: #fff048;
+    border: 0;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 60px;
+}
+
+#choices{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+#result{
+    display: flex;
+    justify-content: center;
+}
+
+#result > div{
+    padding: 8px 20px;
+    font-weight: bold;
+}
