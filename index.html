@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <style>
+        :root{
+            background: linear-gradient(135deg, #ffed24, #d29c14)
+        }
+
+        img {
+            height: 20px;
+            background-color: #ffed24;
+        }
+    </style>
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <div class="container">
+        <div id="score">
+            <div>Computer: <span id="computer-score">0</span></div>
+            <div>You: <span id="your-score">0</span></div>
+        </div>
 
-    <button id="reset">Reset</button>
-
-    <div id="scoreboard">
-        <div id="humanScore">Human Score: 0</div>
-        <div id="computerScore">Computer Score: 0</div>
+        <div id="button-container">
+            <button id="rock"><img src="SVGs/hand-rock.svg" alt="rock"></button>
+            <button id="paper"><img src="SVGs/hand-paper.svg" alt="paper"></button>
+            <button id="scissors"><img src="SVGs/hand-scissors.svg" alt="scissors"></button>
+        </div>
+        <div id="choices"></div>
+        <div id="result"></div>
     </div>
-    <div id="result"></div>
 </body>
+
 </html>
